@@ -3,17 +3,14 @@ package com.vsga.catatanharian;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -126,8 +123,8 @@ public class MainActivity extends AppCompatActivity {
 
     void tampilkanDialogKonfirmasiHapusCatatan(String fileName) {
         new AlertDialog.Builder(this)
-                .setTitle("Hapus Catatan Ini?")
-                .setMessage("Apakah Anda yakin ingin menghapus Catatan " + fileName + "?")
+                .setTitle("Hapus File Ini?")
+                .setMessage("Apakah Anda yakin ingin menghapus File " + fileName + "?")
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.yes, (dialog, which) -> hapusFile(fileName))
                 .setNegativeButton(android.R.string.no, null).show();
